@@ -12,10 +12,12 @@ public class TwoSums {
      */
     public int[] getTwoSum(int[] nums, int target) {
         // Task implementation
-        int count=0;
+        //cycle that goes through every num
+        //currentIndex is for num, which is testing as first member in pair
         for (int currentIndex=0;currentIndex<nums.length;currentIndex++) {
+            //cycle trying other nums (only to the right from current) as second member in pair
             for (int checkingIndex = currentIndex+1; checkingIndex < nums.length ; checkingIndex++) {
-                count++;
+                //case, returning result if pair sum equals target
                 if(nums[currentIndex]+nums[checkingIndex]==target) return new int[]{nums[currentIndex],nums[checkingIndex]};
             }
         }
